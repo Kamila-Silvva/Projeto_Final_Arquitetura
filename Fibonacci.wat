@@ -4,22 +4,22 @@ razao: .asciiz &quot;O valor da razao aurea de&quot;
 pularLinha: .asciiz &quot;\n&quot;
 branco: .asciiz &quot; &quot;
 esimo: .asciiz &quot;n-esimo&quot;
-igual: .asciiz &quot;=&quot;
+igual: .asciiz &quot;=&quot;  #
 
 .text
 .globl main
 main:
 li $a0, 30
 jal fibonacci
-move $s1, $v0 # valor do 30� termo de fibonacci
+move $s1, $v0 # valor do 30 termo de fibonacci
 
 li $a0, 41
 jal fibonacci
-move $s2, $v0 # valor do 41� termo de fibonacci
+move $s2, $v0 # valor do 41 termo de fibonacci
 
 li $a0, 40
 jal fibonacci
-move $s3, $v0 # valor do 40� termo de fibonacci
+move $s3, $v0 # valor do 40 termo de fibonacci
 
 move $a0, $s3
 move $a1, $s2
